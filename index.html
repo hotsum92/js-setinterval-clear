@@ -7,7 +7,18 @@
 <body>
 
 <script>
-  alert('Hello, world!');
+  let count = 0;
+  setInterval(function() {
+    console.log(count++)
+  }, 1000);
+
+  function clearAll() {
+    const id = window.setInterval(function() {}, Number.MAX_SAFE_INTEGER);
+
+    for (let i = 1; i <= id; i++) {
+      window.clearInterval(i);
+    }
+  }
 </script>
 
 </body>
